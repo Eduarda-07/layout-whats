@@ -16,10 +16,10 @@ function criarContatos (link){
 
 
     const novoNome =  document.createElement('h2')
-    novoNome.textContent = link.nome
+    novoNome.textContent = link.name
 
     const novaImg = document.createElement('img')
-    novaImg.src = link.foto
+    novaImg.src = link.profile
 
     card.appendChild(novaImg)
     card.appendChild(novoNome)
@@ -32,7 +32,7 @@ async function preencherContatos(){
   
     const contatos = await mostrarContatos()
    
-    contatos.contatos[0].forEach(criarContatos).
+    contatos.dados_contato.forEach(criarContatos)
 
     console.log (contatos) 
 }
